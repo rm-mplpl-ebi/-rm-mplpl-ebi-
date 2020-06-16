@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<script type="text/javascript" src="MIDI%20data%20capture_files/midi.js"></script>
+<script type="text/javascript" src="MIDI%20data%20capture_files/jquery.js"></script>
+
+<style>
+body.hoge {
+    width: 800px;
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 2em;
+    box-sizing: border-box;
+    background: #f2e7d9;
+    font-family: 'Courier', monospace;
+    color: #633645;
+    line-height: 1.3;
+    user-select: none;
+  }
+  body > div {
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.7);
+    border: 0px solid white;
+  }
+
+  h2, p, ul {
+    padding-bottom: 1em;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  #midi-data {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(214, 41, 41, 0.7);
+  }
+  #midi-data ul {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 1em;
+  }
+  #midi-data ul li {
+    padding: 0.2em 0.2em 0.2em 1em;
+    font-size: 0.5em;
+    font-family: monospace;
+  }
+
+.button1 {
+      WIDTH: 100px;
+      HEIGHT: 30px;
+      font-size: 1em;
+      margin : 0.5em;
+}
+
+.button2 {
+      WIDTH: 150px;
+      HEIGHT: 30px;
+      font-size: 1em;
+      margin : 0.5em;
+}
+
+.select1 {
+  font-size: 1em;
+  WIDTH: 200px;
+  HEIGHT: 40px;
+  margin : 0.5em;
+}
+
+.text {
+  font-size: 1em;
+  WIDTH: 600px;
+  HEIGHT: 40px;
+  margin : 0.5em;
+}
+
+video {
+  border-width: 1px;
+}
+
+</style>
+<title>MIDI data capture</title>
+</head>
+
+<body>
+<div>
+  <button class="button1" onclick="saveTextAsFile()">Save</button>
+  <button class="button1" onclick="postMidiData()">Post</button>
+  <button class="button1" onclick="postAndWait()">Post/Wait</button>
+  <button class="button1" onclick="WaitMode(true)">Wait</button>
+  <button class="button1" onclick="WaitMode(false)">no wait</button>
+  <button class="button1" onclick="clearText()">Clear</button>
+
+  <select class="select1" id="playerName">
+  <option value="player" selected="selected">unknown</option>
+  <option value="kani">kani</option>
+  <option value="matsui">matsui</option>
+  <option value="test">test</option>
+  <option value="acane">acane</option>
+  <option value="sakura">sakura</option>
+  </select>
+
+  <select class="select1" id="songName">
+  <option value="landmann" selected="selected">_shuman_landmann</option>
+  <option value="op53">_chopin_op53</option>
+  <option value="fur_elise">_fur_elise</option>
+  <option value="sonata14">_bethoven_sonata14</option>
+  </select>
+  <br>
+  
+  <input class="text" type="text" id="memo" value="memo">
+</div>
+
+<table>
+  <tbody><tr><td>
+    <section id="midi-data"> 
+        <ul></ul>
+    </section>
+  </td>
+  <td>
+
+      <div id="container">
+
+          <video id="gum" playsinline="" autoplay="autoplay" muted="muted" width="300"></video>
+          <video id="recorded" playsinline="" width="300"></video>
+          <br>
+      
+              <button class="button2" id="start">カメラ起動</button>
+              <button class="button2" id="record" disabled="disabled">開始</button><br>
+              <button class="button2" id="play" disabled="disabled">再生</button>
+              <button class="button2" id="download" disabled="disabled">セーブ</button>
+              <br>エコーキャンセラー: <input type="checkbox" id="echoCancellation">
+              <span id="errorMsg"></span>
+      
+      </div>
+      <div class="select">
+          <label for="audioSource">音声入力デバイス </label><select id="audioSource"><option value="Zp9vk2Xhblm+uVQWFH1N+AgLXGGB2qnnSDb0cf3bo60=" selected="selected">microphone 1</option></select>
+      </div>
+      <div class="select">
+          <label for="audioOutput">音声出力デバイス: </label><select id="audioOutput" disabled="disabled"></select>
+      </div>
+      <div class="select">
+          <label for="videoSource">映像入力デバイス: </label><select id="videoSource"><option value="sYh0tAo1dO+w2T7YcpSOmABQsDRaBWKI0R9NkoAeERw=" selected="selected">camera 1</option></select>
+      </div>
+  </td>
+</tr>
+</tbody></table>
+
+
+    
+    <canvas id="piano" width="600" height="80" style="background-color:white;"></canvas>
+    <script type="text/javascript" src="MIDI%20data%20capture_files/piano.js"></script>
+    <script type="text/javascript" src="MIDI%20data%20capture_files/recorder.js"></script>
+
+   <ul>
+  <li><a href="https://bbled.org/kani/video/">mp4 upload</a></li>
+  <li><a href="https://bbled.org/kani/video/browser.php">file browser</a></li>
+  <li><a href="https://bbled.org/kani/midi/tables.php">midi data list</a></li>
+  </ul>
+
+
+
+</body></html>
