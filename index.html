@@ -2,8 +2,8 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="UTF-8">
-<script type="text/javascript" src="midi.js"></script>
-<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="MIDI%20data%20capture_files/midi.js"></script>
+<script type="text/javascript" src="MIDI%20data%20capture_files/jquery.js"></script>
 
 <style>
 body.hoge {
@@ -97,9 +97,9 @@ video {
 <div>
   <button class="button1" onclick="saveTextAsFile()">Save</button>
   <button class="button1" onclick="postMidiData()">Post</button>
-  <button class="button1" onclick="postAndWait()">Post/Wait</button>
-  <button class="button1" onclick="WaitMode(true)">Wait</button>
-  <button class="button1" onclick="WaitMode(false)">no wait</button>
+  <!--<button class="button1" onclick="postAndWait()">Post/Wait</button>-->
+  <!--<button class="button1" onclick="WaitMode(true)">Wait</button>-->
+  <!--<button class="button1" onclick="WaitMode(false)">no wait</button>-->
   <button class="button1" onclick="clearText()">Clear</button>
 
   <select class="select1" id="playerName">
@@ -109,6 +109,7 @@ video {
   <option value="test">test</option>
   <option value="acane">acane</option>
   <option value="sakura">sakura</option>
+  <option value="sakura">guest</option>
   </select>
 
   <select class="select1" id="songName">
@@ -116,6 +117,7 @@ video {
   <option value="op53">_chopin_op53</option>
   <option value="fur_elise">_fur_elise</option>
   <option value="sonata14">_bethoven_sonata14</option>
+  <option value="sonata14">_other</option>
   </select>
   <br>
   
@@ -138,7 +140,7 @@ video {
       
               <button class="button2" id="start">カメラ起動</button>
               <button class="button2" id="record" disabled="disabled">開始</button><br>
-              <button class="button2" id="play" disabled="disabled">再生</button>
+              <!--<button class="button2" id="play" disabled="disabled">再生</button>-->
               <button class="button2" id="download" disabled="disabled">セーブ</button>
               <br>エコーキャンセラー: <input type="checkbox" id="echoCancellation">
               <span id="errorMsg"></span>
@@ -160,12 +162,12 @@ video {
 
     
     <canvas id="piano" width="600" height="80" style="background-color:white;"></canvas>
-    <script type="text/javascript" src="piano.js"></script>
-    <script type="text/javascript" src="recorder.js"></script>
+    <script type="text/javascript" src="MIDI%20data%20capture_files/piano.js"></script>
+    <script type="text/javascript" src="MIDI%20data%20capture_files/recorder.js"></script>
 
    <ul>
-  <li><a href="https://bbled.org/kani/video/">mp4 upload</a></li>
-  <li><a href="https://bbled.org/kani/video/browser.php">file browser</a></li>
+  <!--<li><a href="https://bbled.org/kani/video/">mp4 upload</a></li>-->
+  <!--<li><a href="https://bbled.org/kani/video/browser.php">file browser</a></li>-->
   <li><a href="https://bbled.org/kani/midi/tables.php">midi data list</a></li>
   </ul>
 
