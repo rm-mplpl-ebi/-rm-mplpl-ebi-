@@ -158,6 +158,17 @@ h3 {
   <option value="sakura">sakura</option>-->
   <option value="sakura">guest</option>
   </select>
+    
+  <label for="select1">楽曲を選択してください：</label>
+  <select class="select1" id="songName">
+  <option value="landmann" selected="selected">_shuman_landmann</option>
+  <option value="op53">_chopin_op53</option>
+  <option value="fur_elise">_fur_elise</option>
+  <option value="sonata14">_bethoven_sonata14</option>
+  <option value="sonata14">_other</option>
+  </select>
+  <br>
+    
   <h3></h3>
     
   <button class="button1" onclick="saveTextAsFile()"><span>Save<span></a></button>
@@ -168,16 +179,6 @@ h3 {
   <button class="button1" onclick="clearText()"><span>Clear<span></span></button>
   <br>
 
-
-  <label for="select1">楽曲を選択してください：</label>
-  <select class="select1" id="songName">
-  <option value="landmann" selected="selected">_shuman_landmann</option>
-  <option value="op53">_chopin_op53</option>
-  <option value="fur_elise">_fur_elise</option>
-  <option value="sonata14">_bethoven_sonata14</option>
-  <option value="sonata14">_other</option>
-  </select>
-  <br>
   
   <input class="text" type="text" id="memo" value="NAME_DATE(YYYY/MM/DD)">
 </div>
@@ -197,7 +198,6 @@ h3 {
           <video id="recorded" playsinline width="300"></video>
           <br>
       
-              <br>
               <button class="button2" id="start">カメラ起動</button>
               <button class="button2" id="record" disabled>開始</button><br>
               <button class="button2" id="play" disabled>再生</button>
