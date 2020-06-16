@@ -148,6 +148,16 @@ h3 {
   <p>ブラウザはGoogle Chromeを使用してください
   <br>はじめにMIDIデバイスとPCを接続してください
   <br>演奏終了後にSaveボタンでMIDIデータを保存します．データ計測をやり直す場合はClearボタンでリセットしてください</p>
+  
+  <label for="select1">ユーザを選択してください：</label>
+  <select class="select1" id="playerName">
+  <option value="player" selected="selected">unknown</option>
+  <!--<option value="kani">kani</option>-->
+  <option value="matsui">matsui</option>
+  <!--<option value="acane">acane</option>
+  <option value="sakura">sakura</option>-->
+  <option value="sakura">guest</option>
+  </select>
   <h3></h3>
     
   <button class="button1" onclick="saveTextAsFile()"><span>Save<span></a></button>
@@ -158,15 +168,6 @@ h3 {
   <button class="button1" onclick="clearText()"><span>Clear<span></span></button>
   <br>
 
-  <label for="select1">ユーザを選択してください：</label>
-  <select class="select1" id="playerName">
-  <option value="player" selected="selected">unknown</option>
-  <!--<option value="kani">kani</option>-->
-  <option value="matsui">matsui</option>
-  <!--<option value="acane">acane</option>
-  <option value="sakura">sakura</option>-->
-  <option value="sakura">guest</option>
-  </select>
 
   <label for="select1">楽曲を選択してください：</label>
   <select class="select1" id="songName">
