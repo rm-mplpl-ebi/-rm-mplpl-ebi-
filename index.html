@@ -62,6 +62,50 @@ body.hoge {
       HEIGHT: 30px;
       font-size: 1em;
       margin : 0.5em;
+      display: inline-block;
+      text-align: center;
+      background-color: #ff69b4;
+      border: 2px solid #ff69b4;
+      color: #ff69b4;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      position: relative;
+}
+    
+ .button1 span {
+      position: relative;
+      z-index: 1;
+}
+    
+ .button1::before,
+ .button1::after {
+      content: "";
+      display: block;
+      background-color: #FFF;
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transition: .2s;
+}
+    
+ .button1::before {
+      left: 0;
+}
+    
+ .button1::after {
+      right: 0;
+}
+
+ .button1:hover:before,
+ .button1:hover:after {
+       width: 0;
+       background-color: #FFF;
+}
+
+ .button1:hover {
+       color: #FFF;
 }
 
 .button2 {
