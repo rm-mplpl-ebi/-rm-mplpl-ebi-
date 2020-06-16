@@ -202,4 +202,3 @@ function gotDevices(deviceInfos) {
 
 navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
 
-
