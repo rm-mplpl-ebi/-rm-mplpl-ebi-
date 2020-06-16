@@ -107,20 +107,23 @@ video {
   <button class="button1" onclick="WaitMode(false)">no wait</button>
   <button class="button1" onclick="clearText()">Clear</button>
 
+  <label for="select1">ユーザを選択してください：</label>
   <select class="select1" id="playerName">
-  <option value="player">unknown</option>
-  <option value="kani">kani</option>
+  <option value="player" selected="selected">unknown</option>
+  <!--<option value="kani">kani</option>-->
   <option value="matsui">matsui</option>
-  <option value="test">test</option>
-  <option value="acane">acane</option>
-  <option value="sakura">sakura</option>
+  <!--<option value="acane">acane</option>
+  <option value="sakura">sakura</option>-->
+  <option value="sakura">guest</option>
   </select>
 
+  <label for="select1">楽曲を選択してください：</label>
   <select class="select1" id="songName">
-  <option value="landmann">_shuman_landmann</option>
+  <option value="landmann" selected="selected">_shuman_landmann</option>
   <option value="op53">_chopin_op53</option>
   <option value="fur_elise">_fur_elise</option>
   <option value="sonata14">_bethoven_sonata14</option>
+  <option value="sonata14">_other</option>
   </select>
   <br>
   
