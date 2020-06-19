@@ -112,7 +112,7 @@ function stopRecording() {
   mediaRecorder.stop();
   console.log('Recorded Blobs: ', recordedBlobs);
   
-  recordButton.textContent = '開始';
+  recordButton.textContent = '録画開始';
   playButton.disabled = false;
   downloadButton.disabled = false;
 }
