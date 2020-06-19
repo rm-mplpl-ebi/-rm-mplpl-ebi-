@@ -23,7 +23,7 @@ const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#recorded');
 const recordButton = document.querySelector('button#record');
 recordButton.addEventListener('click', () => {
-  if (recordButton.textContent === '開始') {
+  if (recordButton.textContent === '録画開始') {
     startRecording();
   } else {
     stopRecording();
